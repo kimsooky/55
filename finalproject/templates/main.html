@@ -1,0 +1,125 @@
+{% extends "base_layout.html" %}
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
+<div class="container-fluid">
+
+    <h1 style="color: #f8f7f7;">ALL MUSIC</h1><br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for sing in sound[0]['songs']['English']  %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="[sing]" class="active"></li>
+           {% endfor %}
+        </ol>
+
+
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    
+                    <img src='{{sound[0]['songs']['English'][0]['img_url']}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sound[0]['songs']['English'][0]["title"]}}
+                    </div>
+        </div>
+        {% for sing in sound[0]['songs']['English'] %}
+        {% if sing != sound[0]['songs']['English'][0] %}
+            <div class="carousel-item">
+                    <img src='{{sing["img_url"]}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sing["title"]}}
+                    </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for sing in sound[0]['songs']['Korea']  %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="[sing]" class="active"></li>
+           {% endfor %}
+        </ol>
+
+
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    
+                    <img src='{{sound[0]['songs']['Korea'][0]['img_url']}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sound[0]['songs']['Korea'][0]["title"]}}
+                    </div>
+        </div>
+        {% for sing in sound[0]['songs']['Korea'] %}
+        {% if sing != sound[0]['songs']['Korea'][0] %}
+            <div class="carousel-item">
+                    <img src='{{sing["img_url"]}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sing["title"]}}
+                    </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for sing in sound[0]['songs']['Korea']  %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="[sing]" class="active"></li>
+           {% endfor %}
+        </ol>
+
+
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    
+                    <img src='{{sound[0]['songs']['Thai'][0]['img_url']}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sound[0]['songs']['Thai'][0]["title"]}}
+                    </div>
+        </div>
+        {% for sing in sound[0]['songs']['Thai'] %}
+        {% if sing != sound[0]['songs']['Thai'][0] %}
+            <div class="carousel-item">
+                    <img src='{{sing["img_url"]}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sing["title"]}}
+                    </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for sing in sound[0]['songs']['Japanese']  %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="[sing]" class="active"></li>
+           {% endfor %}
+        </ol>
+
+
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    
+                    <img src='{{sound[0]['songs']['Japanese'][0]['img_url']}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sound[0]['songs']['Japanese'][0]["title"]}}
+                    </div>
+        </div>
+        {% for sing in sound[0]['songs']['Japanese'] %}
+        {% if sing != sound[0]['songs']['Japanese'][0] %}
+            <div class="carousel-item">
+                    <img src='{{sing["img_url"]}}' style="width: 800px;height: 500px;">
+                    <div style="font-size: 30px;color:white;">{{sing["title"]}}
+                    </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+</div>
+{% endblock %}
+</body>
